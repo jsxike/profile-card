@@ -1,0 +1,126 @@
+/* DEFUALT  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: hsl(185, 75%, 39%);
+  color: hsl(229, 23%, 23%);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+/* SVG */
+.svg_container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.top_image {
+  position: absolute;
+  top: -70%;
+  left: -30%;
+  height: 100rem;
+}
+.bottom_image {
+  position: absolute;
+  bottom: -70%;
+  right: -30%;
+  transform: rotate(180deg);
+  height: 100rem;
+}
+
+/* PROFILE */
+.profile_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+.main_profile-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile_image {
+  border-radius: 50%;
+  transform: translateY(-5rem);
+  border: 3px solid #fff;
+}
+
+.profile_details {
+  margin-top: -3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid hsl(0, 0%, 59%);
+  text-align: center;
+}
+.profile_name,
+.profile_age,
+.profile_country {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.profile_age {
+  color: hsl(0, 0%, 59%);
+}
+.profile_country {
+  color: hsl(0, 0%, 59%);
+}
+
+.profile_details-2 {
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.box {
+  text-align: center;
+}
+.box_number {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.box_details {
+  color: hsl(0, 0%, 59%);
+}
+/* //RESPONSIVE BREAKPOINT
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 25em; // 400px */
+
+@media only screen and (max-width: 1000px) {
+  .top_image,
+  .bottom_image {
+    height: 65rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .top_image,
+  .bottom_image {
+    height: 50rem;
+  }
+}
